@@ -1,7 +1,7 @@
 # pfch-2020-lisemails
 April 2020
 
-Test for pfch 2020 final @ pratt institute
+For pfch 2020 final @ pratt institute
 Matt Millers class Spring 2020
 
 Exported emails → .mbox from my Pratt email.
