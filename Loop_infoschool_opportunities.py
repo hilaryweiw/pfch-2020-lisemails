@@ -1,6 +1,6 @@
 import csv
 
-## For Pratt Information School All-Student Listserv 
+## For Pratt Information School All-Student Listserv
 ## Date July 31, 2019 - Feb 3, 2020
 ## 50 emails
 

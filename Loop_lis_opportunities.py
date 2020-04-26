@@ -5,7 +5,7 @@ import csv
 ##18 emails
 
 full_time_terms = ["Full-time", "Full time", "FT", "Job", "Job:"]
-part_time_terms = [ "Part-time", "Part time", "PT", "P/T", "Fellowship", "Graduate Assistant", "GA"]
+part_time_terms = [ "Part-Time", "Part-time", "Part time", "PT", "P/T", "Fellowship", "Graduate Assistant", "GA"]
 internship_terms =["Intern", "Internship", "Internship:"]
 volunteer_terms = ["Volunteer", "Volunteers"]
 
@@ -21,7 +21,7 @@ internship = 0
 volunteer = 0
 
 #open the lis school email body text csv
-with open("lis_bodytext_clean.csv","r") as lis_emailbody:
+with open("lis_bodytext.csv","r") as lis_emailbody:
     lis_body = csv.reader(lis_emailbody)
 
 # loop through the row in subjectline column
@@ -65,6 +65,15 @@ with open("lis_bodytext_clean.csv","r") as lis_emailbody:
     print("-------")
     print("Volunteer", volunteer)
 
+
+    #this will write it to a csv.
+with open("loop_results_lis.csv","w") as csv_out:
+    csv_writer = csv.writer(csv_out)
+#this writes a new column for every term in the csv and the counter
+    csv_writer.writerow(["Full Time", full_time])
+    csv_writer.writerow(["Part Time", part_time])
+    csv_writer.writerow(["Internship", internship])
+    csv_writer.writerow(["Volunteer", volunteer])
     ##RESULTS##
 # FT 8
 # -------

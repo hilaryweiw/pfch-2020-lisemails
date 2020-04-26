@@ -56,3 +56,12 @@ with open("infoschool_bodytext.csv","r") as infoschool_emailbody:
     print("Tenured", tenured)
     print("Paid Internship", paid)
     print("Unpaid Internship", unpaid)
+
+# "a" appends to the end of the csv.
+with open("loop_results_infoschool.csv","a") as csv_out:
+    csv_writer = csv.writer(csv_out)
+
+    csv_writer.writerow(["FT-Tenured", tenured])
+    csv_writer.writerow(["FT-Termed", grant])
+    csv_writer.writerow(["Internship-Paid", paid])
+    csv_writer.writerow(["Internship-Unpaid", unpaid])

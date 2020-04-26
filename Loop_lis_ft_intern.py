@@ -8,7 +8,7 @@ internship_terms =["Intern", "Internship", "Internship:"]
 grant_terms = ["Grant", "grant", "termed", "Termed", "grant-funded", "fellowship", "temporary" ,"1-year", "2-year"]
 tenured_terms =["tenured," "tracked", "tenure-track", "Tenure-track"]
 #type of internship
-paid_terms = ["paid", "Paid"]
+paid_terms = ["paid", "Paid", "stipend", "$"]
 unpaid_terms = ["unpaid", "Unpaid", "(unpaid)", "volunteer", "Volunteer", "credit"]
 
 #full-time type count
@@ -18,7 +18,7 @@ tenured = 0
 paid = 0
 unpaid = 0
 
-with open("lis_bodytext_clean.csv","r") as lis_emailbody:
+with open("lis_bodytext.csv","r") as lis_emailbody:
     lis_body = csv.reader(lis_emailbody)
 
     for column in lis_body:
@@ -47,8 +47,17 @@ with open("lis_bodytext_clean.csv","r") as lis_emailbody:
     print("Paid Internship", paid)
     print("Unpaid Internship", unpaid)
 
+with open("loop_results_lis.csv","a") as csv_out:
+    csv_writer = csv.writer(csv_out)
+
+    csv_writer.writerow(["FT-Tenured", tenured])
+    csv_writer.writerow(["FT-Termed", grant])
+    csv_writer.writerow(["Internship-Paid", paid])
+    csv_writer.writerow(["Internship-Unpaid", unpaid])
+
+
 ##RESULTS
 # Grant Funded 4
 # Tenured 0
-# Paid Internship 1
+# Paid Internship 2
 # Unpaid Internship 1
