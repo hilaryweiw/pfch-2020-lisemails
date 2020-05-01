@@ -1,10 +1,10 @@
 # pfch-2020-lisemails
 April 2020
 
-For pfch 2020 final @ pratt institute
-Matt Millers class Spring 2020
+For pfch 2020 final @ Pratt Institute School of Information
+Matt Miller's class Spring 2020
 
-Exported emails → .mbox from my Pratt email.
+Exported emails → .mbox from Pratt email.
 In February Pratt Information School created new listservs specifically geared
 towards each of the four tracks so there were two .mbox exports created:
 1. Old “All Students’ listserv
